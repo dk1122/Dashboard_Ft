@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Dropdown.css'; // Import your CSS file
 
 const Dropdown = () => {
+    const nav = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -20,10 +22,10 @@ const Dropdown = () => {
             </div>
             {isOpen && (
                 <div className="dropdown-content">
-                    <a href="#" onClick={() => handleOptionClick('Option 1')}>Add Credits</a>
-                    <a href="#" onClick={() => handleOptionClick('Option 2')}>Subscription</a>
-                    <a href="#" onClick={() => handleOptionClick('Option 3')}>Rates</a>
-                    <a href="#" onClick={() => handleOptionClick('Option 3')}>Reset PAssword</a>
+                    <a href="#" onClick={() => {nav("/Addcredits")}}>Add Credits</a>
+                    <a href="#" onClick={() => {nav("/Subscription")}}>Subscription</a>
+                    <a href="#" onClick={() => {nav("/PricingTable")}}>Rates</a>
+                    <a href="#" onClick={() => {nav("/Password")}}>Reset PAssword</a>
                 </div>
             )}
         </div>
