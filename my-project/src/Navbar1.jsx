@@ -23,7 +23,7 @@ import ToggleButton from "./Togglebutton";
 import Dropdown from "./Dropdown";
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar1 = () => {
     const navigate = useNavigate();
     const [count, setCount] = useState(0);
     const [page, setPage] = useState(0);
@@ -122,7 +122,7 @@ const Navbar = () => {
     const visibleRows = tableData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
 
     return (
-        <Box sx={{ p: 7
+        <Box sx={{ paddingLeft: 7
          }}>
             <Card variant="outlined" sx={{ mb: 3, width: '100%' }}>
                 <CardContent>
@@ -255,4 +255,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Navbar1;

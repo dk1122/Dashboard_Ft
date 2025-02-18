@@ -1,4 +1,3 @@
-import Component from "./component";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Newpage from "./Newpage";
@@ -7,6 +6,7 @@ import Subscription from "./Subscription";
 import AddCredits from "./Add credits";
 import Password from "./Password";
 import PricingTable from "./PricingTable";
+import Component from './Component';
 
 export default function App() {
   return (
